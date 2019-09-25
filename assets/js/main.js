@@ -12,20 +12,24 @@ ScrollReveal().reveal('h2', {
   reset: false
 });
 
-ScrollReveal().reveal('.comp', {
-  duration: 1500,
-  distance: '20px',
-  origin: 'bottom',
-  //scale: 1,
+ScrollReveal().reveal('.impair', {
+  rotate: { x: 0, y: 0, z: -180 },
+  duration: 800,
+  distance: '300px',
+  origin: 'left',
+  delay:300,
+  interval: 200,
   reset: true
 });
-ScrollReveal().reveal('.comp img', {
-  duration: 2000,
-  distance: '30px',
-  origin: 'top',
-  //scale: 1,
+ScrollReveal().reveal('.pair',  {
+  rotate: { x: 0, y: 0, z: 180 },
+  duration: 1000,
+  distance: '300px',
+  origin: 'right',
+  delay: 400,
+  interval: 200,
   reset: true
-});
+}); 
 
 ScrollReveal().reveal('.diplomes', {
   duration: 2000,
@@ -47,7 +51,6 @@ ScrollReveal().reveal('.titreReal', {
 
 ScrollReveal().reveal('.reveallangues', {
   duration: 2000,
-  distance: '0px',
   reset: true,
   viewFactor: 0.2
 });
