@@ -2,13 +2,13 @@
 
 ScrollReveal().reveal('h1', {
   duration: 1000,
-  scale: 0.8,
+  scale: 0.5,
   reset: false
 });
 
 ScrollReveal().reveal('h2', {
   duration: 2000,
-  scale: 0.6,
+  scale: 0.3,
   reset: false
 });
 
@@ -17,29 +17,33 @@ ScrollReveal().reveal('.impair', {
   duration: 800,
   distance: '300px',
   origin: 'left',
-  delay:300,
+  delay: 200,
   interval: 200,
   reset: true
 });
-ScrollReveal().reveal('.pair',  {
+ScrollReveal().reveal('.pair', {
   rotate: { x: 0, y: 0, z: 180 },
   duration: 1000,
   distance: '300px',
   origin: 'right',
   delay: 400,
-  interval: 200,
+  interval: 300,
   reset: true
-}); 
+});
 
 ScrollReveal().reveal('.diplomes', {
-  duration: 2000,
+  duration: 1500,
   reset: true,
+  delay: 300,
+  interval: 200,
   viewFactor: 0.2
 });
 
 ScrollReveal().reveal('.jobs', {
-  duration: 3000,
+  duration: 2500,
   reset: true,
+  delay: 200,
+  interval: 200,
   viewFactor: 0.2
 });
 
@@ -49,22 +53,19 @@ ScrollReveal().reveal('.titreReal', {
   viewFactor: 0.2
 });
 
-ScrollReveal().reveal('.reveallangues', {
-  duration: 2000,
-  reset: true,
-  viewFactor: 0.2
-});
 ScrollReveal().reveal('#langue1', {
-  duration: 1500,
-  origin: 'left',
-  distance: '100px',
+  duration: 1000,
+  rotate: { x: 90, y: 0, z: 0 },
+  origin: 'bottom',
+  delay: 300,
   reset: true,
   viewFactor: 0.2
 });
 ScrollReveal().reveal('#langue2', {
-  duration: 2000,
-  origin: 'right',
-  distance: '90px',
+  duration: 1000,
+  rotate: { x: 90, y: 0, z: 0 },
+  origin: 'bottom',
+  delay: 300,
   reset: true,
   viewFactor: 0.2
 });
@@ -78,7 +79,7 @@ ScrollReveal().reveal('.contact', {
 
 //fixed NAVBAR
 
-window.onscroll = function () {fixedNavbar(), scrollFunction()};
+window.onscroll = function () { fixedNavbar(), scrollFunction() };
 var navbar = document.querySelector("nav");
 var mybutton = document.querySelector("#toTop");
 var sticky = navbar.offsetTop;
@@ -113,23 +114,23 @@ $('a[href*=\\#]').on('click', function (event) {
 //JS QUI ENVOIE LES INFOS DES FORM EN AJAX
 var listForm = document.querySelectorAll("form.ajax");
 
-listForm.forEach(function(element){
-  element.addEventListener('submit', function(event){
+listForm.forEach(function (element) {
+  element.addEventListener('submit', function (event) {
     event.preventDefault();
     var formData = new FormData(this);
-    fetch("url-traitement.php",{
+    fetch("url-traitement.php", {
       method: "POST",
       body: formData
     })
-    .then((response)=>{
-      console.log(response);
-      return response.text();
-    })
-    .then((texteServeur)=>{
-      console.log(texteServeur);
-      var baliseConfirmation = document.querySelector("form .confirmation");
-      baliseConfirmation.innerHTML = texteServeur;
-    });
+      .then((response) => {
+        console.log(response);
+        return response.text();
+      })
+      .then((texteServeur) => {
+        console.log(texteServeur);
+        var baliseConfirmation = document.querySelector("form .confirmation");
+        baliseConfirmation.innerHTML = texteServeur;
+      });
   });
 });
 
