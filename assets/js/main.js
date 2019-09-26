@@ -54,25 +54,25 @@ ScrollReveal().reveal('.titreReal', {
 });
 
 ScrollReveal().reveal('#langue1', {
-  duration: 1000,
+  duration: 1500,
   rotate: { x: 90, y: 0, z: 0 },
   origin: 'bottom',
-  delay: 300,
+  delay: 400,
   reset: true,
   viewFactor: 0.2
 });
 ScrollReveal().reveal('#langue2', {
-  duration: 1000,
+  duration: 1500,
   rotate: { x: 90, y: 0, z: 0 },
   origin: 'bottom',
-  delay: 300,
+  delay: 400,
   reset: true,
   viewFactor: 0.2
 });
 ScrollReveal().reveal('.contact', {
   duration: 3000,
+  delay: 100,
   origin: 'top',
-  distance: '30px',
   reset: true,
   viewFactor: 0.2
 });

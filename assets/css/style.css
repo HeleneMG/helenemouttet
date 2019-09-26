@@ -316,8 +316,8 @@ footer img{
   display:none;
   position: fixed; 
   z-index: 2;
-  bottom: 40px; 
-  right: 40px;
+  bottom: 60px; 
+  right: 45px;
   cursor: pointer;
 } 
 #toTop img { 
