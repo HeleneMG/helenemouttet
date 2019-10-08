@@ -1,0 +1,177 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1f20;
+    font-family: 'Roboto Mono', monospace;
+    color: #ccd0d8;
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #d19a66;
+}
+ul{
+    padding:0;
+}
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(3, 1, 8);
+    border: solid 1px #1E2126;
+    text-align: center;
+}
+.titres{
+    padding: 40px;
+}
+h1{
+    margin: 0 0 10px 0;
+}
+h2{
+    margin: 10px 0 0 0;
+}
+h4{
+    font-size: 30px;
+    color: #56b6c2;
+    margin: 40px auto;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+}
+section{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    line-height: 32px;
+}
+.presentation{
+    width: 80%;
+    margin: auto;
+    border-top: solid 8px rgba(197, 197, 197, 0.068);
+    border-bottom: solid 8px rgba(197, 197, 197, 0.068);
+}
+.jobs{
+  font-size: 20px;
+  color: #d19a66;
+}
+.diplomes{
+  font-size: 20px;  
+  color: #e06c75;
+}
+
+.comp ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.comp li{
+    height: 180px;
+    width: calc(100% / 2);
+    padding: 16px;
+}
+.comp img{
+    width: 80px;
+    height: auto;
+    object-fit:cover;
+}
+.container2{
+    border-bottom: solid 2px rgba(197, 197, 197, 0.068);
+}
+.langues img{
+    width: 100px;
+    height: 50px;
+    object-fit:cover;
+}
+
+.travaux img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    object-fit:cover;
+}
+.contact{
+    border-top: solid 2px rgba(197, 197, 197, 0.068);
+}
+
+/**FOOTER**/
+footer{
+    width: auto;
+    background-color: black;
+    border-style: solid;
+    border-color: #1E2126;
+    font-size: 1em;
+    line-height: 30px;
+    text-align: center;
+}
+footer ul{
+    width: 100%;
+    height: 30vh;
+}
+.col2{
+    display: flex;
+    justify-content: center;    
+}
+.col2 li{
+    margin: 10px;
+}
+footer img{
+    width: 32px;
+    height: 32px;
+}
+
+@media (min-width: 769px){ 
+    section{
+        width: 60%;
+        margin: auto;
+    }
+    .presentation{
+        width: 50%;
+        margin: auto;
+    }
+    .comp li{
+        width: calc(100% / 3);
+    }
+    .realisations{
+        width: 80%;
+    }
+    .travaux{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .travaux li{
+        width: calc(100% / 2);
+    }
+    .travaux img{
+        width: 100%;
+    }
+    footer ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .col1,.col2,.col3{
+        width: calc(100% / 3);
+        flex-wrap: wrap;
+    }
+    .col1{
+        text-align: right;
+    }
+    .col3{
+        text-align: left;
+    }
+
+}

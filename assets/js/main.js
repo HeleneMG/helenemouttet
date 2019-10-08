@@ -15,7 +15,7 @@ ScrollReveal().reveal('h2', {
 ScrollReveal().reveal('.impair', {
   rotate: { x: 0, y: 0, z: -180 },
   duration: 800,
-  distance: '300px',
+  distance: '50px',
   origin: 'left',
   delay: 200,
   interval: 200,
@@ -24,7 +24,7 @@ ScrollReveal().reveal('.impair', {
 ScrollReveal().reveal('.pair', {
   rotate: { x: 0, y: 0, z: 180 },
   duration: 1000,
-  distance: '300px',
+  distance: '50px',
   origin: 'right',
   delay: 400,
   interval: 300,

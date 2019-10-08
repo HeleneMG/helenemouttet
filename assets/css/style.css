@@ -9,7 +9,9 @@ html, body{
   font-weight: 100;
   color: #ccd0d8;
 }
-
+*{
+  box-sizing: border-box;
+}
 a{
   text-decoration: none;
   color: white;
@@ -19,7 +21,6 @@ a:hover{
 }
 
 /**HEADER**/
-
 header{
   height: 97vh;
   margin: 0;
@@ -48,7 +49,7 @@ h2{
   color: #e06c75;
 }
 nav{
-  height: 36px;
+  height: 46px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -59,15 +60,18 @@ nav{
   border: solid 1px #1E2126;
   font-size: 1.3em;
 }
-nav ul{
+
+.menu{
   display: flex;
   width:100%;
   flex-wrap: wrap;
   justify-content: space-around; 
 }
-nav .ul > * {
+
+nav li {
   width:calc(100% / 4);
   min-width:100px;
+  text-align: center;
 }
 .sticky {
   position: fixed;
@@ -75,7 +79,6 @@ nav .ul > * {
 }
 
 /**SECTIONS**/
-
 ul{
   list-style-type: none;
   margin: 0;
@@ -90,7 +93,6 @@ h4{
 }
 
 /**PRESENTATION**/
-
 .presentation{
   padding-top: 30px;
 }
@@ -106,7 +108,6 @@ h4{
 }
 
 /**COMPETENCES**/
-
 .competences h4{
   text-align: center;
   font-size: 3.2em;
@@ -118,10 +119,10 @@ h4{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center
+  justify-content: center;
 }
 .comp li{
-  height: 110px;
+  height: 176px;
   padding: 50px;
   text-align: center;
   font-size: 1em;
@@ -135,7 +136,6 @@ h4{
 }
 
 /**LANGUES**/
-
 .langues{
   text-align: center;
   padding-top: 1.5em;
@@ -162,7 +162,6 @@ h4{
 }
 
 /**FORMATION - EXPERIENCES**/
-
 .container2{
   width: 100%;
   padding: 30px 0;
@@ -200,7 +199,6 @@ h4{
 }
 
 /** REALISATIONS **/
-
 .realisations{
   background-color: #151618;
   padding: 40px;
@@ -216,8 +214,9 @@ h4{
   flex-wrap: wrap;
 }
 .travaux img{
-  width: 600px;
-  height: 277px;
+  width: 100%;
+  height: auto;
+  object-fit:cover;
   padding: 20px; 
 }
 
@@ -230,6 +229,7 @@ h4{
   text-align: center;
   margin:40px;
 }
+/*
 .contact form{
   display: flex;
   flex-direction: column;
@@ -269,11 +269,10 @@ h4{
 .contact form button:hover{
   cursor: pointer;
 }
-
+*/
 /**FOOTER**/
-
 footer{
-  height: 20vh;
+  width: auto;
   background-color: black;
   border-style: solid;
   border-color: #1E2126;
@@ -282,8 +281,8 @@ footer{
   line-height: 30px;
 }
 footer ul{
-  height: 20vh;
-  display: flex;
+  width: 100%;
+  height: 30vh;  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -310,8 +309,8 @@ footer img{
 .col3{
   text-align: left;
 }
-/** TO TOP **/
 
+/** TO TOP **/
 #toTop { 
   display:none;
   position: fixed; 
@@ -325,20 +324,50 @@ footer img{
   height: 64px; 
 }
 
+/*MEDIA QUERIES*/
 
-
-@media  (max-width: 640px){ 
+@media (max-width: 768px){ 
   nav{
-    font-size: 1.9em;
+    font-size: 40px;
+    height: fit-content;
   }
+  section{
+    width: 100%;
+  }
+  h4{
+    font-size: 40px;
+  }
+ 
   .presentation p{
     width: 75%;
   }
+  .comp ul{
+    width: 100%;
+  }
+  .container2{
+    display: block;
+  }
   .formation, .experiences{
-    padding: 20px;
+    width: 90%;
+    text-align: center;
     font-size: 2em;
+    padding: 0;
+  }
+  .jobs, .diplomes{
+    font-size: 30px;
+  }
+  .container2 li{
+    font-size: 25px;
+  }
+
+  .travaux img{
+    width: 60px;
+    height: 27px;
+    padding: 20px; 
   }
   .contact{
     width: 80%;
+    margin: auto;
   }
+
 }
