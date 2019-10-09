@@ -114,6 +114,7 @@ $('a[href*=\\#]').on('click', function (event) {
 //JS QUI ENVOIE LES INFOS DES FORM EN AJAX
 var listForm = document.querySelectorAll("form.ajax");
 
+/*
 listForm.forEach(function (element) {
   element.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -133,8 +134,6 @@ listForm.forEach(function (element) {
       });
   });
 });
-
-/*
 var listeFormAjax = document.querySelectorAll("form.ajax");
 listeFormAjax.forEach(function (formulaire) {
   // on ajoute un event listener sur 'submit'
